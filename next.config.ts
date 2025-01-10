@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://pro-api.coingecko.com/api/v3/search/trending',
+      },
+    ];
+  },
+  images: {
+    domains: ['coin-images.coingecko.com'],
+  },
 };
-
-export default nextConfig;
