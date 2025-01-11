@@ -12,18 +12,17 @@ import Overview from "../.././_components/Overview";
 import { CryptoDataFetcher } from "../.././_components/CryptoDataFetcher";
 
 export default async function Page({
-    params,
-  }: {
-    params: Promise<{ id: string }>
-  }) {
-    const slug = (await params).id
-    console.log(slug)
-    
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const slug = (await params).id;
+  const cryptoName = slug.charAt(0).toUpperCase() + slug.slice(1);
   return (
     <div>
       <Navbar />
       <div className="mx-10 mt-2">
-        <Breadcrumb />
+        <Breadcrumb cryptoName={cryptoName} />
       </div>
       <div className="flex flex-wrap items-start justify-center lg:justify-between mx-0">
         <div className="w-full lg:w-[70%] mb-4 lg:mb-0">
