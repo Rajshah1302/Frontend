@@ -4,7 +4,15 @@ import axios from "axios";
 import Image from "next/image";
 
 export function TrendingCoins() {
-  const [coins, setCoins] = useState<any[]>([]); 
+  interface Coin {
+    id: string;
+    name: string;
+    symbol: string;
+    image: string;
+    price_change_percentage_24h: number;
+  }
+
+  const [coins, setCoins] = useState<Coin[]>([]);
 
   useEffect(() => {
     axios
@@ -12,7 +20,7 @@ export function TrendingCoins() {
         "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=3&page=1&sparkline=false"
       )
       .then((response) => {
-        setCoins(response.data); // Set the response data to the state
+        setCoins(response.data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -26,7 +34,7 @@ export function TrendingCoins() {
       </CardHeader>
       <CardContent className="space-y-4">
         {coins.length > 0 ? (
-          coins.map((coin: any) => (
+          coins.map((coin: Coin) => (
             <div key={coin.id} className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <div className="h-6 w-6 rounded-full">
