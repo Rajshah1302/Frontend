@@ -1,6 +1,6 @@
 # Crypto Dashboard
 
-This is a React-based Crypto Dashboard that displays cryptocurrency data, including price, market cap, and a price chart with customizable time ranges. The app leverages modern UI components and responsive design principles for an intuitive user experience.
+This is a Next-based Crypto Dashboard that displays cryptocurrency data, including price, market cap, and a price chart with customizable time ranges. The app leverages modern UI components and responsive design principles for an intuitive user experience.
 
 ## Demo Video
 
