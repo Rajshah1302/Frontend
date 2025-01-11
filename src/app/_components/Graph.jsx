@@ -2,9 +2,11 @@
 import React, { useEffect, useRef, memo } from "react";
 
 function Graph({ range = "5D", symbol = "MARKETSCOM:BITCOIN" }) {
-  const container = useRef();
+  const container = useRef(null);
 
   useEffect(() => {
+    if (!container.current) return;
+
     const script = document.createElement("script");
     script.src =
       "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
@@ -29,8 +31,11 @@ function Graph({ range = "5D", symbol = "MARKETSCOM:BITCOIN" }) {
       }`;
     container.current.appendChild(script);
 
+    // Cleanup function
     return () => {
-      container.current.innerHTML = "";
+      if (container.current) {
+        container.current.innerHTML = "<h1></h1>"; 
+      }
     };
   }, [range, symbol]);
 
