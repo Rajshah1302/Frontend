@@ -1,5 +1,4 @@
 "use client";
-import { CryptoCard } from "./_components/CryptoCard";
 import { GetStartedCard } from "./_components/GetStartedCard";
 import { Navbar } from "./_components/Navbar";
 import React from "react";
@@ -11,6 +10,7 @@ import Tokenomics from "./_components/Tokenomics";
 import Team from "./_components/Team";
 import Footer from "./_components/Footer";
 import Overview from "./_components/Overview";
+import { CryptoDataFetcher } from "./_components/CryptoDataFetcher";
 
 export default function Home() {
   return (
@@ -21,16 +21,16 @@ export default function Home() {
       </div>
       <div className="flex flex-wrap items-start justify-center lg:justify-between mx-0">
         <div className="w-full lg:w-[70%] mb-4 lg:mb-0">
-          <CryptoCard
+          <CryptoDataFetcher
             cryptoId="bitcoin"
             cryptoSymbol="BTC"
             cryptoName="Bitcoin"
-          />
-          <Overview/>
+          />{" "}
+          <Overview />
           <SentimentDashboard />
           <About />
-          <Tokenomics/>
-          <Team/>
+          <Tokenomics />
+          <Team />
         </div>
 
         <div className="w-full lg:w-[29%] flex flex-col gap-4 lg:ml-3 mx-5 sm:mx-0">
@@ -40,7 +40,7 @@ export default function Home() {
           <TrendingCoins />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
