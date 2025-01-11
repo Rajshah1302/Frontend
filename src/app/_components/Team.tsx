@@ -29,7 +29,7 @@ const mockData = [
 
 export default function Team() {
   return (
-    <div className="max-w-6xl ml-10 bg-white rounded-lg p-6">
+    <div className="rounded-lg p-6 bg-white my-5 shadow-md max-w-6xl mx-5 sm:mx-0 sm:ml-10">
       <h1 className="text-2xl font-bold mb-4">Team</h1>
       <p className="text-muted-foreground mb-8">
         Lorem ipsum dolor sit amet consectetur. Id consequat adipiscing arcu nibh. Eget mattis in mi integer sit

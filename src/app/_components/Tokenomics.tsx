@@ -9,7 +9,7 @@ const data = [
 
 export default function Tokenomics() {
   return (
-    <div className="max-w-6xl ml-10 p-6 bg-white rounded-lg">
+    <div className="rounded-lg p-6 bg-white my-5 shadow-md max-w-6xl mx-5 sm:mx-0 sm:ml-10">
       <div className="space-y-6">
         <h2 className="text-2xl font-bold">Tokenomics</h2>
         

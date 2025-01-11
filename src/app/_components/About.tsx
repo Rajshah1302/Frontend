@@ -7,7 +7,7 @@ import img2 from "../../../public/about2.jpg";
 
 export default function About() {
   return (
-    <div className="max-w-5xl ml-10 rounded-lg p-6 bg-white">
+    <div className="rounded-lg p-6 bg-white my-5 shadow-md max-w-6xl mx-5 sm:mx-0 sm:ml-10">
       <div className="space-y-8">
         <section className="space-y-6">
           <h2 className="text-2xl font-bold">About Bitcoin</h2>

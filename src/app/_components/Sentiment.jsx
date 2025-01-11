@@ -23,7 +23,7 @@ const ProgressBar = ({ label, value, color }) => {
 
 export default function SentimentAlternative() {
   return (
-    <Card className="max-w-5xl ml-10">
+    <Card className="rounded-lg p-6 bg-white my-5 shadow-md max-w-6xl mx-5 sm:mx-0 sm:ml-10">
       <CardContent className="p-6 space-y-8">
         <section>
           <div className="flex items-center gap-2 mb-6">

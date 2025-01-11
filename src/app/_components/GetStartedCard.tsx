@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export function GetStartedCard() {
   return (
-    <Card className="bg-[#0052FE] text-white max-w-sm ">
+    <Card className="bg-[#0052FE] text-white max-w-sm lg:max-w-6xl lg:mx-auto">
       <CardHeader className="space-y-1 text-center">
         <h2 className="text-2xl font-bold">Get Started with KoinX</h2>
         <h3 className="text-xl font-bold">for FREE</h3>
