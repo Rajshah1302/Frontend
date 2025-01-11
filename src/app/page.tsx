@@ -10,6 +10,7 @@ import About from "./_components/About";
 import Tokenomics from "./_components/Tokenomics";
 import Team from "./_components/Team";
 import Footer from "./_components/Footer";
+import Overview from "./_components/Overview";
 
 export default function Home() {
   return (
@@ -25,13 +26,13 @@ export default function Home() {
             cryptoSymbol="BTC"
             cryptoName="Bitcoin"
           />
+          <Overview/>
           <SentimentDashboard />
           <About />
           <Tokenomics/>
           <Team/>
         </div>
 
-        {/* Right Column with spacing on larger devices */}
         <div className="w-full lg:w-[29%] flex flex-col gap-4 lg:ml-3 mx-5 sm:mx-0">
           <div className="mb-2 lg:mb-2 mr-0 lg:mr-10">
             <GetStartedCard />
