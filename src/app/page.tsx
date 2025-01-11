@@ -17,7 +17,7 @@ export default function Home() {
     <div>
       <Navbar />
       <div className="mx-10 mt-2">
-        <Breadcrumb />
+        <Breadcrumb cryptoName="Bitcoin"/>
       </div>
       <div className="flex flex-wrap items-start justify-center lg:justify-between mx-0">
         <div className="w-full lg:w-[70%] mb-4 lg:mb-0">
