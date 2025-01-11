@@ -4,9 +4,9 @@ import axios from "axios";
 import { CryptoCard } from "./CryptoCard";
 
 export function CryptoDataFetcher({ cryptoId, cryptoSymbol, cryptoName }) {
-  const [data, setData] = useState(null); // For price and market cap
-  const [details, setDetails] = useState(null); // For additional crypto details
-  const [loading, setLoading] = useState(true); // Loading state
+  const [data, setData] = useState(null); 
+  const [details, setDetails] = useState(null); 
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchData = async () => {
