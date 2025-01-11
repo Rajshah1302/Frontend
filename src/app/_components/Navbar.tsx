@@ -11,7 +11,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 w-full border-b bg-white">
+    <header className="sticky top-0 w-full border-b bg-white z-50">
       <div className="container flex h-16 p-5 items-center justify-between">
         {/* Logo on the left */}
         <div className="flex items-center">
