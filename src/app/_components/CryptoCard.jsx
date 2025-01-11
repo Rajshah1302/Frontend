@@ -14,7 +14,13 @@ const timeRanges = [
   { label: "ALL", value: "ALL" },
 ];
 
-export function CryptoCard({ cryptoId, cryptoSymbol, cryptoName, price, marketCap }) {
+export function CryptoCard({
+  cryptoId,
+  cryptoSymbol,
+  cryptoName,
+  price,
+  marketCap,
+}) {
   const [selectedRange, setSelectedRange] = useState("7D");
 
   return (
@@ -25,9 +31,15 @@ export function CryptoCard({ cryptoId, cryptoSymbol, cryptoName, price, marketCa
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F7931A]"></div>
             <div className="flex items-center gap-2">
               <span className="text-xl font-semibold">{cryptoName}</span>
-              <span className="text-sm text-muted-foreground">{cryptoSymbol}</span>
+              <span className="text-sm text-muted-foreground">
+                {cryptoSymbol}
+              </span>
             </div>
-            <span className="rounded-md bg-muted px-2 py-1 text-sm bg-[#778296]">Rank #1</span>
+            {cryptoId === "bitcoin" && (
+              <span className="rounded-md bg-muted px-2 py-1 text-sm bg-[#778296]">
+                Rank #1
+              </span>
+            )}
           </div>
           <div className="space-y-1">
             <div className="flex items-center gap-3">
@@ -37,18 +49,24 @@ export function CryptoCard({ cryptoId, cryptoSymbol, cryptoName, price, marketCa
               </div>
               <span className="ml-1 text-muted-foreground">(24H)</span>
             </div>
-            <div className="text-sm text-muted-foreground">Market Cap: ${marketCap}</div>
+            <div className="text-sm text-muted-foreground">
+              Market Cap: ${marketCap}
+            </div>
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <div className="block justify-between items-center sm:flex">
-              <h3 className="text-sm font-medium">{cryptoName} Price Chart (USD)</h3>
+              <h3 className="text-sm font-medium">
+                {cryptoName} Price Chart (USD)
+              </h3>
               <div className="flex gap-2">
                 {timeRanges.map((range) => (
                   <Button
                     key={range.value}
-                    variant={selectedRange === range.value ? "default" : "outline"}
+                    variant={
+                      selectedRange === range.value ? "default" : "outline"
+                    }
                     className="text-[13px] py-[2px] px-[4px] sm:text-sm sm:py-2 sm:px-4"
                     onClick={() => setSelectedRange(range.value)}
                   >
@@ -58,7 +76,11 @@ export function CryptoCard({ cryptoId, cryptoSymbol, cryptoName, price, marketCa
               </div>
             </div>
             <div className="h-[300px] w-full rounded-lg border">
-              <Graph key={selectedRange} range={selectedRange} />
+              <Graph
+                key={selectedRange}
+                range={selectedRange}
+                symbol={cryptoSymbol}
+              />
             </div>
           </div>
         </CardContent>
