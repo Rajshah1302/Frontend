@@ -39,7 +39,7 @@ export default function Team() {
         {mockData.map((member) => (
           <div
             key={member.id}
-            className="bg-blue-100 p-6 rounded-lg flex gap-8 items-start"
+            className="bg-blue-100 p-6 rounded-lg block sm:flex gap-8 justify-center sm:items-start"
           >
             <div className="space-y-2">
               <Image

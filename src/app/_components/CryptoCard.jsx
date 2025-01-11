@@ -42,14 +42,14 @@ export function CryptoCard({ cryptoId, cryptoSymbol, cryptoName, price, marketCa
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <div className="flex justify-between items-center">
+            <div className="block justify-between items-center sm:flex">
               <h3 className="text-sm font-medium">{cryptoName} Price Chart (USD)</h3>
               <div className="flex gap-2">
                 {timeRanges.map((range) => (
                   <Button
                     key={range.value}
                     variant={selectedRange === range.value ? "default" : "outline"}
-                    size="sm"
+                    className="text-[13px] py-[2px] px-[4px] sm:text-sm sm:py-2 sm:px-4"
                     onClick={() => setSelectedRange(range.value)}
                   >
                     {range.label}
