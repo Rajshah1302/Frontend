@@ -70,7 +70,7 @@ export default function Footer() {
           <h1 className="text-xl font-bold mb-4 mx-5">You May Also Like</h1>
           <CarouselContent>
             {coins.map((coin) => (
-              <CarouselItem key={coin.id} className="lg:basis-1/5 basis-1/3">
+              <CarouselItem key={coin.id} className="lg:basis-1/5 basis-1/2">
                 <div className="p-1">
                   <Card>
                     <CardContent className="flex flex-col p-4">
@@ -118,7 +118,7 @@ export default function Footer() {
           <h1 className="text-xl font-bold mb-4 mx-5">Trending Coins</h1>
           <CarouselContent>
             {coins.map((coin) => (
-              <CarouselItem key={coin.id} className="lg:basis-1/5 basis-1/3">
+              <CarouselItem key={coin.id} className="lg:basis-1/5 basis-1/2">
                 <div className="p-1">
                   <Card>
                     <CardContent className="flex flex-col p-4">
